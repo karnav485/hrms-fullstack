@@ -169,7 +169,10 @@
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  line-height: 1.2;
+  line-height: 1;
+  /* Clean line height for better alignment */
+  display: flex;
+  align-items: center;
 }
 
 .header-date {
@@ -1133,12 +1136,17 @@
   border: none;
   color: var(--text-primary);
   font-size: 1.5rem;
-  padding: 0.5rem;
-  margin-left: -0.5rem;
-  margin-right: 0.5rem;
+  padding: 0.4rem;
+  /* Slightly reduced padding */
+  margin-left: -0.4rem;
   cursor: pointer;
   border-radius: var(--radius-sm);
   transition: all var(--transition-fast);
+  line-height: 1;
+  display: flex;
+  /* Added flex to center the icon */
+  align-items: center;
+  justify-content: center;
 }
 
 .mobile-btn-toggle:hover {
@@ -1198,7 +1206,7 @@
   }
 
   .mobile-btn-toggle {
-    display: block;
+    display: flex;
   }
 
   .mobile-btn-close {
