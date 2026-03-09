@@ -157,7 +157,9 @@
 .header-left {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.75rem;
+  /* Slightly tighter gap for mobile */
+  height: 100%;
 }
 
 .header-info {
@@ -1149,6 +1151,8 @@
   /* Added flex to center the icon */
   align-items: center;
   justify-content: center;
+  margin-top: -2px;
+  /* Optical adjustment to match text baseline */
 }
 
 .mobile-btn-toggle:hover {
@@ -1186,6 +1190,11 @@
 }
 
 @media (max-width: 768px) {
+  body {
+    touch-action: manipulation;
+    /* Disables double-tap to zoom globally */
+  }
+
   .sidebar {
     transform: translateX(-100%);
     transition: transform var(--transition-slow);
@@ -1204,11 +1213,35 @@
   }
 
   .header {
-    padding: 1rem;
+    padding: 0 1rem;
+    height: 64px;
+    /* Slightly shorter for mobile */
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .header-title {
+    font-size: 1.2rem;
+    line-height: 1;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-top: 1px;
+    /* Optical nudge */
   }
 
   .mobile-btn-toggle {
     display: flex;
+    height: 44px;
+    width: 44px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
   }
 
   .mobile-btn-close {
