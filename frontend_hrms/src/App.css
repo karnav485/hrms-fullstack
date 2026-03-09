@@ -1193,6 +1193,7 @@
   body {
     touch-action: manipulation;
     /* Disables double-tap to zoom globally */
+    overflow-x: hidden;
   }
 
   .sidebar {
@@ -1249,35 +1250,52 @@
   }
 
   .main-content {
+    padding: 0.75rem;
+    /* Reduced from 1rem */
+  }
+
+  .card {
     padding: 1rem;
+    /* Reduced from 1.5rem to prevent content cut-off */
   }
 
   .page-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .employee-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .attendance-form-grid {
     grid-template-columns: 1fr;
   }
 
+  .status-btn {
+    padding: 0.65rem 0.5rem;
+    /* Reduced horizontal padding for fit */
+    font-size: 0.95rem;
+  }
+
   .filter-controls {
     flex-direction: column;
     align-items: stretch;
+    gap: 0.75rem;
   }
 
   .dashboard-stats {
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
 
   .employee-list-toolbar {
     flex-direction: column;
     align-items: stretch;
+    gap: 1rem;
   }
 
   .stat-card {
