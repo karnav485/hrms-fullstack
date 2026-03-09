@@ -1,5 +1,4 @@
 [build]
-  base = "frontend_hrms"
   publish = "dist"
   command = "npm run build"
 
