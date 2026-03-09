@@ -317,6 +317,8 @@
   flex-direction: column;
   gap: 0.4rem;
   margin-bottom: 1rem;
+  min-width: 0;
+  /* Prevents child overflow in flex/grid */
 }
 
 .form-label {
@@ -329,6 +331,8 @@
 
 .form-input {
   width: 100%;
+  display: block;
+  /* Ensure it starts on a new line and respects width */
   padding: 0.7rem 0.9rem;
   background: var(--bg-input);
   border: 1px solid var(--border-color);
@@ -338,6 +342,17 @@
   /* 16px - Prevents iOS zoom on focus */
   transition: all var(--transition-fast);
   box-sizing: border-box;
+  text-align: left;
+  /* Fixes centered date text in some browsers */
+}
+
+/* Specific fix for Safari/iOS Date Inputs */
+input[type="date"].form-input {
+  min-height: 48px;
+  /* Standardize with select/buttons */
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
 }
 
 .form-input:focus {
