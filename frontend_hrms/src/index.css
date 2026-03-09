@@ -102,8 +102,8 @@ input,
 select,
 textarea {
   font-family: inherit;
-  font-size: 1rem;
-  /* 16px - Prevents iOS zoom on focus */
+  font-size: 16px;
+  /* Explicit 16px prevents iOS zoom on focus regardless of rem sizing */
   outline: none;
 }
 
