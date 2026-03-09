@@ -95,7 +95,8 @@
   border-radius: var(--radius-sm);
   color: var(--text-secondary);
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  /* 16px - Prevents iOS zoom and improves readability */
   transition: all var(--transition-fast);
 }
 
@@ -161,7 +162,8 @@
 
 .header-date {
   color: var(--text-secondary);
-  font-size: 0.85rem;
+  font-size: 1rem;
+  /* 16px - Prevents iOS zoom and improves readability */
   margin-top: 0.15rem;
 }
 
@@ -174,7 +176,8 @@
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  /* 16px - Prevents iOS zoom and improves readability */
   color: white;
 }
 
@@ -197,7 +200,8 @@
 
 .page-description {
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 1rem;
+  /* 16px - Prevents iOS zoom and improves readability */
 }
 
 /* ---- Cards ---- */
@@ -307,7 +311,8 @@
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
   color: var(--text-primary);
-  font-size: 0.9rem;
+  font-size: 1rem;
+  /* 16px - Prevents iOS zoom on focus */
   transition: all var(--transition-fast);
 }
 
@@ -371,7 +376,8 @@
   padding: 0.65rem 1rem;
   border-radius: var(--radius-sm);
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 1rem;
+  /* 16px - Prevents iOS zoom and improves readability */
   border: 1px solid var(--border-color);
   background: var(--bg-input);
   color: var(--text-secondary);
@@ -426,7 +432,8 @@
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
   color: var(--text-primary);
-  font-size: 0.9rem;
+  font-size: 1rem;
+  /* 16px - Prevents iOS zoom and improves readability */
   transition: all var(--transition-fast);
 }
 
@@ -448,13 +455,15 @@
   border: none;
   color: var(--text-secondary);
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: 1rem;
+  /* 16px - Prevents iOS zoom and improves readability */
   padding: 0.2rem;
 }
 
 .employee-count {
   color: var(--text-secondary);
-  font-size: 0.85rem;
+  font-size: 1rem;
+  /* 16px - Prevents iOS zoom and improves readability */
   white-space: nowrap;
 }
 
@@ -540,7 +549,8 @@
 }
 
 .employee-detail-value {
-  font-size: 0.85rem;
+  font-size: 1rem;
+  /* 16px - Prevents iOS zoom and improves readability */
   color: var(--text-secondary);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -622,7 +632,8 @@
 
 .delete-confirm-warning {
   color: var(--accent-danger);
-  font-size: 0.85rem;
+  font-size: 1rem;
+  /* 16px - Prevents iOS zoom and improves readability */
   margin-bottom: 1rem;
   padding: 0.65rem;
   background: var(--accent-danger-bg);
@@ -659,7 +670,8 @@
 .filter-select,
 .filter-input {
   padding: 0.55rem 0.75rem;
-  font-size: 0.85rem;
+  font-size: 1rem;
+  /* 16px - Prevents iOS zoom */
 }
 
 .filter-clear {
@@ -845,7 +857,8 @@
 
 .department-name {
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  /* 16px - Prevents iOS zoom and improves readability */
 }
 
 .department-count {
@@ -928,7 +941,8 @@
   justify-content: center;
   cursor: pointer;
   transition: all var(--transition-fast);
-  font-size: 0.85rem;
+  font-size: 1rem;
+  /* 16px - Prevents iOS zoom and improves readability */
 }
 
 .modal-close:hover {
@@ -974,7 +988,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.85rem;
+  font-size: 1rem;
+  /* 16px - Prevents iOS zoom and improves readability */
   font-weight: 700;
   flex-shrink: 0;
 }
@@ -1000,7 +1015,8 @@
 }
 
 .toast-message {
-  font-size: 0.85rem;
+  font-size: 1rem;
+  /* 16px - Prevents iOS zoom and improves readability */
   color: var(--text-primary);
   line-height: 1.4;
 }
@@ -1026,7 +1042,8 @@
 
 .loader-text {
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 1rem;
+  /* 16px - Prevents iOS zoom and improves readability */
 }
 
 /* ---- Empty State ---- */
@@ -1054,7 +1071,8 @@
 
 .empty-state-description {
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 1rem;
+  /* 16px - Prevents iOS zoom and improves readability */
   max-width: 360px;
   margin-bottom: 1.25rem;
 }
@@ -1084,7 +1102,8 @@
 
 .error-state-message {
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 1rem;
+  /* 16px - Prevents iOS zoom and improves readability */
   max-width: 360px;
   margin-bottom: 1.25rem;
 }
