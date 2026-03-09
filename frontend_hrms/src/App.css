@@ -154,10 +154,22 @@
   border-bottom: 1px solid var(--border-color);
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+}
+
 .header-title {
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .header-date {
