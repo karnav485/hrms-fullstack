@@ -7,7 +7,7 @@ const pageTitles = {
     '/attendance': 'Attendance Tracking',
 };
 
-const Header = React.memo(function Header() {
+const Header = React.memo(function Header({ onToggleSidebar }) {
     const { pathname } = useLocation();
     const title = pageTitles[pathname] || 'HRMS Lite';
 
@@ -21,8 +21,17 @@ const Header = React.memo(function Header() {
     return (
         <header className="header">
             <div className="header-left">
-                <h2 className="header-title">{title}</h2>
-                <p className="header-date">{today}</p>
+                <button
+                    className="mobile-btn-toggle"
+                    onClick={onToggleSidebar}
+                    aria-label="Toggle Sidebar"
+                >
+                    ☰
+                </button>
+                <div className="header-info">
+                    <h2 className="header-title">{title}</h2>
+                    <p className="header-date">{today}</p>
+                </div>
             </div>
             <div className="header-right">
                 <div className="header-avatar">

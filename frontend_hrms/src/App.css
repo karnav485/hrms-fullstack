@@ -1089,6 +1089,51 @@
   margin-bottom: 1.25rem;
 }
 
+.sidebar-transition {
+  transition: transform var(--transition-slow);
+}
+
+.mobile-btn-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  margin-left: -0.5rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.mobile-btn-toggle:hover {
+  background: var(--bg-card);
+}
+
+.mobile-btn-close {
+  display: none;
+  background: var(--bg-card);
+  border: none;
+  color: var(--text-secondary);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 1024px) {
   .attendance-form-grid {
@@ -1098,15 +1143,36 @@
 
 @media (max-width: 768px) {
   .sidebar {
-    display: none;
+    transform: translateX(-100%);
+    transition: transform var(--transition-slow);
+    z-index: 2000;
+    /* Above overlay */
+    box-shadow: none;
+  }
+
+  .sidebar-open {
+    transform: translateX(0);
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
   }
 
   .main-area {
     margin-left: 0;
   }
 
+  .header {
+    padding: 1rem;
+  }
+
+  .mobile-btn-toggle {
+    display: block;
+  }
+
+  .mobile-btn-close {
+    display: flex;
+  }
+
   .main-content {
-    padding: 1.25rem;
+    padding: 1rem;
   }
 
   .page-header {
@@ -1125,6 +1191,7 @@
 
   .filter-controls {
     flex-direction: column;
+    align-items: stretch;
   }
 
   .dashboard-stats {
@@ -1135,10 +1202,37 @@
     flex-direction: column;
     align-items: stretch;
   }
+
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .stat-card-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.25rem;
+  }
+
+  .stat-card-value {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width: 480px) {
   .dashboard-stats {
     grid-template-columns: 1fr;
+  }
+
+  .header-left {
+    gap: 0.5rem;
+  }
+
+  .header-date {
+    display: none;
+    /* Hide date on very small phones to save space */
+  }
+
+  .header-title {
+    font-size: 1.15rem;
   }
 }

@@ -7,9 +7,9 @@ const navItems = [
     { to: '/attendance', icon: '📅', label: 'Attendance' },
 ];
 
-const Sidebar = React.memo(function Sidebar() {
+const Sidebar = React.memo(function Sidebar({ isOpen, onClose }) {
     return (
-        <aside className="sidebar">
+        <aside className={`sidebar ${isOpen ? 'sidebar-open' : ''}`}>
             <div className="sidebar-brand">
                 <div className="sidebar-logo">
                     <span className="sidebar-logo-icon">💼</span>
@@ -18,6 +18,14 @@ const Sidebar = React.memo(function Sidebar() {
                     <h1 className="sidebar-title">HRMS</h1>
                     <span className="sidebar-subtitle">Lite</span>
                 </div>
+                {/* Mobile Close Button */}
+                <button
+                    className="mobile-btn-close"
+                    onClick={onClose}
+                    aria-label="Close Sidebar"
+                >
+                    ✕
+                </button>
             </div>
 
             <nav className="sidebar-nav" role="navigation">
@@ -26,6 +34,7 @@ const Sidebar = React.memo(function Sidebar() {
                         key={item.to}
                         to={item.to}
                         end={item.to === '/'}
+                        onClick={onClose} // Auto-close on link click (only matters for mobile)
                         className={({ isActive }) =>
                             `sidebar-link${isActive ? ' sidebar-link-active' : ''}`
                         }
